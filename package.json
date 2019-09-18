@@ -1,19 +1,19 @@
 {
-  "name": "persistent-json",
+  "name": "betterjsonfile",
   "version": "1.0.0",
-  "description": "save your json for later",
+  "description": "Easy way to save json to file",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/samdelong/persistent-json.git"
+    "url": "git+https://github.com/samdelong/node-betterjsonfile.git"
   },
   "author": "sam delong",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/samdelong/persistent-json/issues"
+    "url": "https://github.com/samdelong/node-betterjsonfile/issues"
   },
-  "homepage": "https://github.com/samdelong/persistent-json#readme"
+  "homepage": "https://github.com/samdelong/node-betterjsonfile#readme"
 }
