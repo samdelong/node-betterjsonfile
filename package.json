@@ -1,6 +1,6 @@
 {
   "name": "betterjsonfile",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Easy way to save json to file",
   "main": "index.js",
   "scripts": {
