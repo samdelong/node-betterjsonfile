@@ -9,6 +9,8 @@ var sync = true;
 const proxySettings = {
   set: function(obj, prop, val) {
     obj[prop] = val;
+
+    // Save changes to file
     if (sync) {
       writeSync();
     } else {
@@ -17,6 +19,7 @@ const proxySettings = {
     return true;
   },
   get: function(obj, prop) {
+    // Inner objects need to be tracked as well
     if (obj[prop] && typeof obj[prop] === 'object') {
       return new Proxy(obj[prop], proxySettings);
     }
@@ -37,11 +40,12 @@ function write() {
 }
 
 function read(loc){
-
+  // #TODO: Async
   let dat = fs.readFileSync(loc);
   if(Buffer.isBuffer(dat)){
     dat = dat.toString('utf8');
   }
+  // Fix weird Buffer things
   return new Proxy(JSON.parse(dat.replace(/^\uFEFF/, '')), proxySettings)
 }
 
